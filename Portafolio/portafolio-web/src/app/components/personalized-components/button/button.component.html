@@ -1,0 +1,8 @@
+<ng-container *ngIf="disabled === false ; else defaultButton">
+      <button    [class]="[color, stylized]"> {{ text }}</button>
+</ng-container>
+
+<ng-template #defaultButton>
+
+</ng-template>
+

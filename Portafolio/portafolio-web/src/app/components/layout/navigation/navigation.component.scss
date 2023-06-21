@@ -1,0 +1,47 @@
+@mixin text-logo {
+    color: transparent;
+    background: rgb(113,25,74);
+    background: linear-gradient(358deg, rgb(149 49 104) 0%, rgb(219, 16, 91) 100%);
+    -webkit-background-clip: text;
+}
+
+nav{
+    box-shadow: 60px -16px teal;
+}
+
+nav ul li {
+    padding: 5px 15px;
+    color: gray;
+    position: relative;
+}
+
+nav ul li::after,
+nav ul li::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background: rgb(113,25,74);
+    background: linear-gradient(358deg, rgb(149 49 104) 0%, rgb(219, 16, 91) 100%);
+    transition: .5s;
+}
+
+nav ul li::after{
+    left: 0;
+    bottom: -10px;
+}
+
+nav ul li::before{
+    right: 0;
+    top: -10px;
+}
+
+nav ul li:hover {
+    @include text-logo();
+    cursor: pointer;
+}
+
+nav ul li:hover::after,
+nav ul li:hover::before{
+    width: 100%;
+}

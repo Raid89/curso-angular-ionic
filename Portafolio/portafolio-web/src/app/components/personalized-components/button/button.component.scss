@@ -1,0 +1,112 @@
+@mixin button-default{
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 1px 3px #000000;
+        &:active{
+            box-shadow: none;
+            transform: scale(0.90);
+        }
+}
+
+@mixin button-flat{
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+        &:active{
+            box-shadow: none;
+            transform: scale(0.90);
+        }
+}
+
+@mixin button-disabled{
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: no-drop
+}
+
+//BUTTONS DEFAULT
+.primary.default{
+    @include button-default;
+    color: #ffff;
+    background-color: #120727;
+        &:hover {
+            background-color: #311e55
+        }
+}
+
+.secondary.default{
+    @include button-default;
+    color: #ffff;
+    background-color: #6924A5;
+        &:hover {
+            background-color: #743ba5
+        }
+}
+
+.warn.default{
+    @include button-default;
+    color: #ffff;
+    background-color: #F2AF29;
+        &:hover {
+            background-color: #ebb447
+        }
+}
+
+.cancel.default{
+    @include button-default;
+    color: #000000;
+    background-color: #FFF;
+}
+
+//BUTTONS FLAT
+.primary.flat{
+    @include button-flat;
+    color: #ffff;
+    background-color: #120727;
+        &:hover {
+            background-color: #311e55
+        }
+}
+
+.secondary.flat{
+    @include button-flat;
+    color: #ffff;
+    background-color: #6924A5;
+        &:hover {
+            background-color: #743ba5
+        }
+}
+
+.warn.flat{
+    @include button-flat;
+    color: #ffff;
+    background-color: #F2AF29;
+        &:hover {
+            background-color: #ebb447
+        }
+}
+
+.cancel.flat{
+    @include button-flat;
+    color: #000000;
+    background-color: #FFF;
+}
+.disabled{
+    @include button-disabled();
+}

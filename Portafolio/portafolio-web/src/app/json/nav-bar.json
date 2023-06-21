@@ -1,0 +1,19 @@
+[
+    {
+        "nombre": "Inicio",
+        "icon": "fi fi-rr-home",
+        "url": "/home"
+    },
+
+    {
+        "nombre": "Sobre mi",
+        "icon": "fi fi-rr-picpeople",
+        "url": "/whitme"
+    },
+
+    {
+        "nombre": "Proyectos",
+        "icon": "fi fi-rr-browser",
+        "url": "/projects"
+    }
+]
